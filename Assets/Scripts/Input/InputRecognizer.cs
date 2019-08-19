@@ -17,13 +17,12 @@ public class InputRecognizer
         for (var joyIndex = 1; joyIndex <= 6; joyIndex++)
         {
 
-
             if (!buttons.Any())
                 buttons = Enum.GetValues(typeof(JoystickButton)).Cast<JoystickButton>().ToArray();
 
             var pressed =
                 buttons
-                    .Select(button => button.GetName(joyIndex))
+                    .Select(button => button.GetInputName(joyIndex))
                     .Any(unityInput.GetButton);
 
             if (pressed)
