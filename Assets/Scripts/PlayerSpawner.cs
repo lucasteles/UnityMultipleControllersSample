@@ -32,7 +32,7 @@ public class PlayerSpawner : MonoBehaviour
         if (!newPlayers.Any())
             return;
 
-        var playersToBeAdded = newPlayers.Take(4 - CurrentPlayers.Count);
+        var playersToBeAdded = newPlayers.Take(playerCount - CurrentPlayers.Count);
 
         foreach (var playerJoystick in playersToBeAdded)
         {

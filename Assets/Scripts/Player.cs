@@ -22,8 +22,5 @@ public class Player : MonoBehaviour
         transform.Translate(moveX * speed, 0, 0);
         transform.Translate(0, 0, moveY * speed);
 
-
-
-
     }
 }
