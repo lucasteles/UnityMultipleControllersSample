@@ -38,6 +38,7 @@ public class PlayerSpawner : MonoBehaviour
         {
             CurrentPlayers.Add(playerJoystick);
             var player = Instantiate(playerPrefab);
+            player.name = $"Player{playerJoystick}";
             player.GetComponent<PlayerInput>().AssignJoystick(playerJoystick);
         }
 
