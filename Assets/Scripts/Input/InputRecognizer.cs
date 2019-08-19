@@ -11,7 +11,6 @@ public class InputRecognizer
         this.unityInput = unityInput;
     }
 
-
     public IEnumerable<Joystick> GetJoystickWichPress(params JoystickButton[] buttons)
     {
         for (var joyIndex = 1; joyIndex <= 6; joyIndex++)

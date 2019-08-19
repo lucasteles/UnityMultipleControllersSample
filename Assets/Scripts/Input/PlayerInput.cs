@@ -1,11 +1,17 @@
 ﻿using UnityEngine;
+using Zenject;
 
 public class PlayerInput : MonoBehaviour
 {
 
     [SerializeField] Joystick JoystickNumber;
-    UnityInput input = new UnityInput();
+    UnityInput input;
 
+    [Inject]
+    public void Construct(UnityInput input)
+    {
+        this.input = input;
+    }
 
     public float Horizontal => input.GetAxis(JoystickNumber.GetHorizontalAxisName());
     public float Vertical => input.GetAxis(JoystickNumber.GetVerticalAxisName());

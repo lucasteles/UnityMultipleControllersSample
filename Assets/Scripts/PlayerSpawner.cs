@@ -1,16 +1,23 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Zenject;
 
 public class PlayerSpawner : MonoBehaviour
 {
 
     [SerializeField] Transform playerPrefab;
     [SerializeField] int playerCount = 4;
+    InputRecognizer inputRecognizer;
+
+
+    [Inject]
+    public void Construct(InputRecognizer inputRecognizer)
+    {
+        this.inputRecognizer = inputRecognizer;
+    }
 
     public List<Joystick> CurrentPlayers { get; private set; } = new List<Joystick>();
-
-    InputRecognizer inputRecognizer = new InputRecognizer(new UnityInput());
 
     void FixedUpdate()
     {

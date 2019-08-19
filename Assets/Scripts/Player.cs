@@ -6,13 +6,11 @@ public class Player : MonoBehaviour
     public int Speed;
     PlayerInput input;
 
-    // Start is called before the first frame update
     void Start()
     {
         input = GetComponent<PlayerInput>();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
