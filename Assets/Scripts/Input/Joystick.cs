@@ -1,4 +1,4 @@
-﻿public enum JoystickButton { A, B, X, Y }
+﻿public enum JoystickButton { A, B, X, Y, Start }
 public enum Joystick { _1, _2, _3, _4, _5, _6 }
 
 public static class JoystickExtensions

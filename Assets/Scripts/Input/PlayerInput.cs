@@ -12,6 +12,6 @@ public class PlayerInput : MonoBehaviour
 
     public void AssignJoystick(Joystick joystick) => JoystickNumber = joystick;
 
-    bool ButtonIsDown(JoystickButton button) =>
+    public bool ButtonIsDown(JoystickButton button) =>
           input.GetButton(button.GetInputName(JoystickNumber));
 }
