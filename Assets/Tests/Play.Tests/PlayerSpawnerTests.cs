@@ -49,7 +49,8 @@ public class PlayerSpawnerTests : ZenjectIntegrationTestFixture
     }
 
     public IEnumerable<PlayerInput> GetPLayers() =>
-        Object.FindObjectsOfType<PlayerInput>().Where(x => x.name.Contains("Player"));
+        Object.FindObjectsOfType<PlayerInput>()
+            .Where(x => x.name.Contains("Player")).ToArray();
 
     [UnityTest]
     public IEnumerator ShouldSpawnTwoPlayersIfTheyPressStart()
@@ -57,7 +58,7 @@ public class PlayerSpawnerTests : ZenjectIntegrationTestFixture
         inputMock.GetButton(Button.Start.GetInputName(_1)).Returns(true);
         inputMock.GetButton(Button.Start.GetInputName(_2)).Returns(true);
 
-        yield return null;
+        yield return new WaitForFixedUpdate();
 
         GetPLayers().Should().HaveCount(2);
 
@@ -70,7 +71,7 @@ public class PlayerSpawnerTests : ZenjectIntegrationTestFixture
         inputMock.GetButton(Button.Start.GetInputName(_2)).Returns(true);
         inputMock.GetButton(Button.Start.GetInputName(_3)).Returns(true);
 
-        yield return null;
+        yield return new WaitForFixedUpdate();
 
         GetPLayers().Should().HaveCount(3);
     }
@@ -83,7 +84,7 @@ public class PlayerSpawnerTests : ZenjectIntegrationTestFixture
         inputMock.GetButton(Button.Start.GetInputName(_3)).Returns(true);
         inputMock.GetButton(Button.Start.GetInputName(_4)).Returns(true);
 
-        yield return null;
+        yield return new WaitForFixedUpdate();
 
         GetPLayers().Should().HaveCount(4);
     }
@@ -98,7 +99,7 @@ public class PlayerSpawnerTests : ZenjectIntegrationTestFixture
         inputMock.GetButton(Button.Start.GetInputName(_5)).Returns(true);
         inputMock.GetButton(Button.Start.GetInputName(_6)).Returns(true);
 
-        yield return null;
+        yield return new WaitForFixedUpdate();
 
         GetPLayers().Should().HaveCount(4);
     }
@@ -109,12 +110,12 @@ public class PlayerSpawnerTests : ZenjectIntegrationTestFixture
         inputMock.GetButton(Button.Start.GetInputName(_1)).Returns(true);
         inputMock.GetButton(Button.Start.GetInputName(_2)).Returns(true);
 
-        yield return null;
+        yield return new WaitForFixedUpdate();
 
         inputMock.GetButton(Button.Start.GetInputName(_3)).Returns(true);
         inputMock.GetButton(Button.Start.GetInputName(_4)).Returns(true);
 
-        yield return null;
+        yield return new WaitForFixedUpdate();
         playerSpawner.isActiveAndEnabled.Should().BeFalse();
     }
 
