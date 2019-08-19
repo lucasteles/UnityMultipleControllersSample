@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Move : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public int Speed;
 
@@ -23,15 +23,6 @@ public class Move : MonoBehaviour
         transform.Translate(0, 0, moveY * speed);
 
 
-        for (int c = 1; c < 7; c++)
-        {
-
-            var t = Input.GetButton($"J{c}.A");
-
-            if (t)
-                print($"controller {c} - pressed!");
-
-        }
 
 
     }
