@@ -6,6 +6,7 @@ public class PlayerSpawner : MonoBehaviour
 {
 
     [SerializeField] Transform playerPrefab;
+    [SerializeField] int playerCount = 4;
 
     public List<Joystick> CurrentPlayers { get; private set; } = new List<Joystick>();
 
@@ -13,7 +14,7 @@ public class PlayerSpawner : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (CurrentPlayers.Count == 2)
+        if (CurrentPlayers.Count == playerCount)
             Destroy(this);
 
         var newPlayers = inputRecognizer
