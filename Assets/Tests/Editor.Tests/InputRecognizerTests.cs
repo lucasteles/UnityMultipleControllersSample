@@ -2,7 +2,6 @@
 using NSubstitute;
 using NUnit.Framework;
 using System.Linq;
-using static InputRecognizer;
 
 namespace Tests
 {

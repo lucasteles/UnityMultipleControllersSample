@@ -12,14 +12,6 @@ public class InputRecognizer
     }
 
 
-    public enum JoystickButton { A, B, X, Y }
-    public enum Joystick { _1, _2, _3, _4, _5, _6 }
-
-
-    public string GetButtonName(int joystick, JoystickButton button) =>
-        $"J{joystick}.{button}";
-
-
     public IEnumerable<Joystick> GetJoystickWichPress(params JoystickButton[] buttons)
     {
         for (var joyIndex = 1; joyIndex <= 6; joyIndex++)
@@ -31,7 +23,7 @@ public class InputRecognizer
 
             var pressed =
                 buttons
-                    .Select(button => GetButtonName(joyIndex, button))
+                    .Select(button => button.GetName(joyIndex))
                     .Any(unityInput.GetButton);
 
             if (pressed)
