@@ -6,7 +6,7 @@ using Zenject;
 public class PlayerSpawner : MonoBehaviour
 {
 
-    [SerializeField] Transform playerPrefab;
+    [SerializeField] GameObject playerPrefab;
     [SerializeField] int playerCount = 4;
     InputRecognizer inputRecognizer;
 
@@ -21,9 +21,6 @@ public class PlayerSpawner : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (CurrentPlayers.Count == playerCount)
-            Destroy(this);
-
         var newPlayers = inputRecognizer
                 .GetJoystickWichPress(JoystickButton.Start)
                 .Except(CurrentPlayers)
@@ -42,5 +39,9 @@ public class PlayerSpawner : MonoBehaviour
             player.GetComponent<PlayerInput>().AssignJoystick(playerJoystick);
         }
 
+        if (CurrentPlayers.Count == playerCount)
+            gameObject.SetActive(false);
     }
+
+    public void SetPlayerPrefab(GameObject player) => playerPrefab = player;
 }
