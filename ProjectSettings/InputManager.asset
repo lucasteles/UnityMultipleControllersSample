@@ -16,7 +16,7 @@ InputManager:
     gravity: 0
     dead: 0.19
     sensitivity: 1
-    snap: 0
+    snap: 1
     invert: 0
     type: 2
     axis: 0
@@ -32,7 +32,7 @@ InputManager:
     gravity: 0
     dead: 0.19
     sensitivity: 1
-    snap: 0
+    snap: 1
     invert: 1
     type: 2
     axis: 1
@@ -117,7 +117,6 @@ InputManager:
     type: 0
     axis: 0
     joyNum: 1
-
   - serializedVersion: 3
     m_Name: J2.Horizontal
     descriptiveName: 
@@ -129,7 +128,7 @@ InputManager:
     gravity: 0
     dead: 0.19
     sensitivity: 1
-    snap: 0
+    snap: 1
     invert: 0
     type: 2
     axis: 0
@@ -145,7 +144,7 @@ InputManager:
     gravity: 0
     dead: 0.19
     sensitivity: 1
-    snap: 0
+    snap: 1
     invert: 1
     type: 2
     axis: 1
@@ -230,7 +229,6 @@ InputManager:
     type: 0
     axis: 0
     joyNum: 2
-
   - serializedVersion: 3
     m_Name: J3.Horizontal
     descriptiveName: 
@@ -242,7 +240,7 @@ InputManager:
     gravity: 0
     dead: 0.19
     sensitivity: 1
-    snap: 0
+    snap: 1
     invert: 0
     type: 2
     axis: 0
@@ -258,7 +256,7 @@ InputManager:
     gravity: 0
     dead: 0.19
     sensitivity: 1
-    snap: 0
+    snap: 1
     invert: 1
     type: 2
     axis: 1
@@ -343,7 +341,6 @@ InputManager:
     type: 0
     axis: 0
     joyNum: 3
-
   - serializedVersion: 3
     m_Name: J4.Horizontal
     descriptiveName: 
@@ -355,7 +352,7 @@ InputManager:
     gravity: 0
     dead: 0.19
     sensitivity: 1
-    snap: 0
+    snap: 1
     invert: 0
     type: 2
     axis: 0
@@ -371,7 +368,7 @@ InputManager:
     gravity: 0
     dead: 0.19
     sensitivity: 1
-    snap: 0
+    snap: 1
     invert: 1
     type: 2
     axis: 1
@@ -456,7 +453,6 @@ InputManager:
     type: 0
     axis: 0
     joyNum: 4
-
   - serializedVersion: 3
     m_Name: J5.Horizontal
     descriptiveName: 
@@ -468,7 +464,7 @@ InputManager:
     gravity: 0
     dead: 0.19
     sensitivity: 1
-    snap: 0
+    snap: 1
     invert: 0
     type: 2
     axis: 0
@@ -484,7 +480,7 @@ InputManager:
     gravity: 0
     dead: 0.19
     sensitivity: 1
-    snap: 0
+    snap: 1
     invert: 1
     type: 2
     axis: 1
@@ -569,7 +565,6 @@ InputManager:
     type: 0
     axis: 0
     joyNum: 5
-
   - serializedVersion: 3
     m_Name: J6.Horizontal
     descriptiveName: 
@@ -581,7 +576,7 @@ InputManager:
     gravity: 0
     dead: 0.19
     sensitivity: 1
-    snap: 0
+    snap: 1
     invert: 0
     type: 2
     axis: 0
@@ -597,7 +592,7 @@ InputManager:
     gravity: 0
     dead: 0.19
     sensitivity: 1
-    snap: 0
+    snap: 1
     invert: 1
     type: 2
     axis: 1
